@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.17ef5579.css",
-    "main.js": "/static/js/main.53a0100a.js",
+    "main.js": "/static/js/main.eb4be8ea.js",
     "static/js/787.4b24f717.chunk.js": "/static/js/787.4b24f717.chunk.js",
     "static/media/Photo.jpg": "/static/media/Photo.f70deefc86760c696005.jpg",
     "static/media/crypto-finance.webp": "/static/media/crypto-finance.ee8fd6e96c362c14c332.webp",
@@ -9,11 +9,11 @@
     "static/media/kratia.webp": "/static/media/kratia.d5e843577ef6524bc954.webp",
     "index.html": "/index.html",
     "main.17ef5579.css.map": "/static/css/main.17ef5579.css.map",
-    "main.53a0100a.js.map": "/static/js/main.53a0100a.js.map",
+    "main.eb4be8ea.js.map": "/static/js/main.eb4be8ea.js.map",
     "787.4b24f717.chunk.js.map": "/static/js/787.4b24f717.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.17ef5579.css",
-    "static/js/main.53a0100a.js"
+    "static/js/main.eb4be8ea.js"
   ]
 }

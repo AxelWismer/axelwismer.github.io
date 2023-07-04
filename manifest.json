@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Portfolio",
+  "name": "Axel Wismer's Portfolio",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,8 +8,8 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo.png",
-      "type": "image/png",
+      "src": "logo.webp",
+      "type": "image/webp",
       "sizes": "500x500"
     }	    
   ],
