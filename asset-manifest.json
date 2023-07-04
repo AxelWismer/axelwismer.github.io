@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.17ef5579.css",
-    "main.js": "/static/js/main.1f5a813f.js",
+    "main.js": "/static/js/main.cfb621ae.js",
     "static/js/787.4b24f717.chunk.js": "/static/js/787.4b24f717.chunk.js",
     "static/media/Photo.jpg": "/static/media/Photo.f70deefc86760c696005.jpg",
-    "static/media/Axel-Wismer-Fullstack-Engineer-CV.pdf": "/static/media/Axel-Wismer-Fullstack-Engineer-CV.39399669c36d3cb82ae6.pdf",
+    "static/media/crypto-finance.webp": "/static/media/crypto-finance.b8f9bb6e00cf570629d1.webp",
+    "static/media/cids.webp": "/static/media/cids.c7267bcb809b3e55ba16.webp",
     "index.html": "/index.html",
     "main.17ef5579.css.map": "/static/css/main.17ef5579.css.map",
-    "main.1f5a813f.js.map": "/static/js/main.1f5a813f.js.map",
+    "main.cfb621ae.js.map": "/static/js/main.cfb621ae.js.map",
     "787.4b24f717.chunk.js.map": "/static/js/787.4b24f717.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.17ef5579.css",
-    "static/js/main.1f5a813f.js"
+    "static/js/main.cfb621ae.js"
   ]
 }
