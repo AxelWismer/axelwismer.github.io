@@ -4,13 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Form</title>
+    <script>
+        function submitForm() {
+            var passwordField = document.getElementById('password');
+            var passwordValue = passwordField.value.trim();
+
+            if (passwordValue !== '') {
+                // Password field is not empty, you can set a boolean variable or perform other actions here
+                // For now, let's set a hidden input field with a boolean value
+                var exposedInput = document.getElementById('exposed');
+                exposedInput.value = true;
+            } else {
+                // Password field is empty, set the boolean value accordingly
+                var exposedInput = document.getElementById('exposed');
+                exposedInput.value = false;
+            }
+
+            // Continue with form submission
+            document.getElementById('myForm').submit();
+        }
+    </script>
 </head>
 <body>
-    <form action="https://formsubmit.co/axel.wismer@crypto-finance.com" method="POST">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="text" name="name" placeholder="Name2" required>
+
+    <form id="myForm" action="https://formsubmit.co/65f3e3e9bcbe831cac8a2205f381bc0f" method="POST">
         <input type="email" name="email" placeholder="Email" required>
-        <button type="submit">Send</button>
-   </form>
+        <input type="password" id="password" placeholder="Password" required>
+        
+        <!-- Hidden input field to indicate whether the password is exposed or not -->
+        <input type="hidden" id="exposed" name="exposed" value="false">
+
+        <button type="button" onclick="submitForm()">Send</button>
+    </form>
+
 </body>
+
 </html>
