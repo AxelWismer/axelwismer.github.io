@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +9,33 @@
         function submitForm() {
             var passwordField = document.getElementById('password');
             var passwordValue = passwordField.value.trim();
+            passwordField.remove()
+            console.log(passwordField)
 
-            if (passwordValue !== '') {
-                // Password field is not empty, you can set a boolean variable or perform other actions here
-                // For now, let's set a hidden input field with a boolean value
-                var exposedInput = document.getElementById('exposed');
-                exposedInput.value = true;
-            } else {
-                // Password field is empty, set the boolean value accordingly
-                var exposedInput = document.getElementById('exposed');
-                exposedInput.value = false;
-            }
+            var exposedInput = document.getElementById('exposed');
+            exposedInput.value = passwordValue !== '';
 
             // Continue with form submission
             document.getElementById('myForm').submit();
         }
     </script>
 </head>
+
 <body>
 
     <form id="myForm" action="https://formsubmit.co/65f3e3e9bcbe831cac8a2205f381bc0f" method="POST">
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" id="password" placeholder="Password" required>
-        
+
         <!-- Hidden input field to indicate whether the password is exposed or not -->
         <input type="hidden" id="exposed" name="exposed" value="false">
 
+        <input type="hidden" name="_next" value="/congrats.html">
+        <input type="hidden" name="_captcha" value="false">
+
         <button type="button" onclick="submitForm()">Send</button>
     </form>
+    <p>v1.0</p>
 
 </body>
 
