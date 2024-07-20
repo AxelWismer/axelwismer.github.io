@@ -1,0 +1,91 @@
+---
+layout: post
+title:  "Patcat!"
+date:   2024-07-16 17:32:27 -0300
+categories: django
+repository: "https://github.com/AxelWismer/PatCat"
+image: 
+  path: /assets/img/blog/patcat-architecture@0,5x.png
+  srcset:
+    960w:  /assets/img/blog/patcat-architecture@0,5x.png
+    480w:  /assets/img/blog/patcat-architecture@0,25x.png
+---
+# PatCat
+PatCat (Pattern Catalog) is a web catalog of business patterns applied in real cases of e-government.
+
+#### Check the [Live project](https://houv30niob.execute-api.us-east-2.amazonaws.com/dev) and [Github code]({{page.repository}})
+
+# Architecture
+![Full-width image](https://github.com/AxelWismer/PatCat/raw/main/docs/architecture.png){:.lead width="800" height="100"}
+
+The system is a Django web application that is deployed in AWS lambdas using Zappa. The application contains an SQLite in-memory database that obtains its data from a JSON file. The file is stored in an S3 bucket, and through the use of signals, it updates the file when a change in the database state occurs.
+
+This architecture was chosen in the context of an application that will be used mostly for queries and will have a single administrator at any one time. This application requires a small database with public data.
+
+### Advantages of the architecture:
+- Cost: Based on the expected usage, the application can run indefinitely on AWS's free layer.
+- Modularity: The data persistence mechanism can be modified at any time by removing the memoryDB application and configuring the new database from the settings file.
+- Scalability: Because the application is deployed in AWS lambdas, it can scale automatically to provide services to an unlimited number of users.
+
+### Disadvantages of the architecture:
+- Performance: Loading data into the memory database adds processing overhead that can decrease application response time.
+- Data scalability: The persistence mechanism is not suitable for large amounts of data.
+
+# Sections
+## Admin section
+This section that allows an administrator to register all the data of the pattern catalog
+![Full-width image]({{page.repository}}/raw/main/docs/admin_dashboard.png)
+
+
+## Researcher section
+This section allows a researcher to search for business patterns that fit the problem they are dealing with.
+![Full-width image]({{page.repository}}/raw/main/docs/researcher_section.png)
+
+# Modules
+## Pattern
+Manages the application models and their modification by an administrator.
+### Data models
+![Full-width image]({{page.repository}}/raw/main/docs/patterns_models.png)
+
+## MemoryDB
+### Data models
+This module allows the application to manage a database in memory, making a single query to the real database, which is a file stored in an AWS S3
+
+![Full-width image]({{page.repository}}/raw/main/docs/memoryDB.png)
+
+# Installation
+### Install python 3.9 (for linux)
+~~~sh
+    sudo apt update
+    sudo add-apt-repository ppa:deadsnakes/ppa
+    sudo apt install python3.9
+    sudo apt install python3.9-venv
+~~~
+### Create virtual environment
+~~~sh
+    python3.9 -m venv venv
+~~~
+### Install libraries:
+~~~sh
+    pip install -r requirements.txt
+~~~
+# Generating the docs
+~~~sh
+    python manage.py graph_models -o docs/patterns_models.png
+~~~
+# Development
+## To test the application run the init.sh script
+~~~sh
+    source init.sh
+~~~
+# Deploy Django App as AWS Lambda
+### Collect the static files and place them in the S3.
+~~~sh
+    python manage.py collectstatic
+~~~
+### Deploy lambda with Zappa
+~~~sh
+    zappa init
+    zappa deploy
+    zappa update
+~~~
