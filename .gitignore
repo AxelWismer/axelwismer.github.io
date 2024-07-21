@@ -4,6 +4,7 @@ _site
 _drafts
 .ruby-version
 Gemfile.lock
+_example
 
 # Numerous always-ignore extensions
 *.diff

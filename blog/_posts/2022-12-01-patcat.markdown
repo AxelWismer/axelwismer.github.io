@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Patcat!"
-date:   2024-07-16 17:32:27 -0300
-categories: django
+tags: django blockchain
 repository: "https://github.com/AxelWismer/PatCat"
 image: 
   path: /assets/img/blog/patcat-architecture@0,5x.png
