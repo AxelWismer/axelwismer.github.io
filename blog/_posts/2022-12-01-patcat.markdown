@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Patcat!"
+title:  "Patcat"
 tags: django blockchain
 repository: "https://github.com/AxelWismer/PatCat"
 image: 
