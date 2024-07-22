@@ -364,11 +364,11 @@ plugins:
 #   admins:              <id>
 
 # Used on index and about sites
-# social:
-#   name:                <firstname> <lastname>
-#   links:
-#     - https://twitter.com/<username>
-#     - https://github.com/<username>
+social:
+  name:                <firstname> <lastname>
+  links:
+    - https://www.linkedin.com/in/axel-wismer/
+    - https://github.com/AxelWismer
 
 
 # Plugin Configs
@@ -404,25 +404,17 @@ jekyll_compose:
   default_front_matter:
     drafts:
       layout: post
-      description: > 
-        A short ~160 character description of your post for search engines,
-        social media previews, etc.
-      image:
-        path: /assets/img/sidebar-bg.jpg
+      image: 
+        path: /assets/img/thumbnail-1920x1080.jpg
+        srcset:
+          1920w: /assets/img/thumbnail-1920x1080.jpg
+          960w:  /assets/img/thumbnail-960x540.jpg
+          480w:  /assets/img/thumbnail-480x270.jpg
     posts:
       layout: post
-      description: > 
-        A short ~160 character description of your post for search engines,
-        social media previews, etc.
-      image:
-        path: /assets/img/sidebar-bg.jpg
-    projects:
-      layout: project
-      description: > 
-        A short ~160 character description of your post for search engines,
-        social media previews, etc.
-      image:
-        path: /assets/img/sidebar-bg.jpg
-      links:
-        - title: Project Link
-          url: https://example.com
+      image: 
+        path: /assets/img/thumbnail-1920x1080.jpg
+        srcset:
+          1920w: /assets/img/thumbnail-1920x1080.jpg
+          960w:  /assets/img/thumbnail-960x540.jpg
+          480w:  /assets/img/thumbnail-480x270.jpg

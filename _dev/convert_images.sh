@@ -22,3 +22,10 @@ convert assets/icons/icon.png -resize 144x144 -background transparent -gravity c
 convert assets/icons/icon.png -resize 96x96 -background transparent -gravity center assets/icons/icon-96x96.png
 convert assets/icons/icon.png -resize 72x72 -background transparent -gravity center assets/icons/icon-72x72.png
 
+## Convert thumbnail
+## Resize to the correct format by cropping 
+convert assets/img/thumbnail.png -resize 1920x1080^ -gravity center -crop 1920x1080+0+0 +repage assets/img/thumbnail-1920x1080.jpg
+
+## Resize proportionally
+convert assets/img/thumbnail-1920x1080.jpg -resize 960x540 -background transparent -gravity center assets/img/thumbnail-960x540.jpg
+convert assets/img/thumbnail-1920x1080.jpg -resize 480x270 -background transparent -gravity center assets/img/thumbnail-480x270.jpg
