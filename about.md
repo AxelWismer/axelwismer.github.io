@@ -1,6 +1,5 @@
 ---
 layout: about
-image: /assets/img/sidebar-bg.jpg
 image: 
   path: /assets/img/thumbnail-1920x1080.jpg
   srcset:
