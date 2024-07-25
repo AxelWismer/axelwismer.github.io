@@ -12,11 +12,11 @@ image:
 
 <!--author-->
 
-# About this page
+## About this page
 
 I created this page to document my projects in frontend, backend, cloud, cryptography, and blockchain technologies.
 
-You can find articles and documentation on my [blog]({{site.baseurl}}/).
+You can find articles and documentation on my [Blog](/articles).
 
 For information on all my public projects, check my [GitHub](https://github.com/axelwismer).
 
