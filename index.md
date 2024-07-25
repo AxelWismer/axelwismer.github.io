@@ -16,7 +16,7 @@ image:
 
 I created this page to document my projects in frontend, backend, cloud, cryptography, and blockchain technologies.
 
-You can find articles and documentation on my [Blog](/articles).
+You can find articles and documentation on my [Blog](/blog).
 
 For information on all my public projects, check my [GitHub](https://github.com/axelwismer).
 

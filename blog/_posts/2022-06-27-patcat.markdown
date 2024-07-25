@@ -2,6 +2,7 @@
 layout: post
 title:  "Patcat"
 tags: django blockchain
+sitemap: false
 repository: "https://github.com/AxelWismer/PatCat"
 image: 
   path: /assets/img/blog/patcat-architecture@0,5x.png
@@ -10,7 +11,9 @@ image:
     480w:  /assets/img/blog/patcat-architecture@0,25x.png
 description: > 
     PatCat (Pattern Catalog) is a web catalog of business patterns applied in real cases of e-government.
+
 ---
+
 # PatCat
 
 

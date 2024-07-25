@@ -29,3 +29,8 @@ convert assets/img/thumbnail.png -resize 1920x1080^ -gravity center -crop 1920x1
 ## Resize proportionally
 convert assets/img/thumbnail-1920x1080.jpg -resize 960x540 -background transparent -gravity center assets/img/thumbnail-960x540.jpg
 convert assets/img/thumbnail-1920x1080.jpg -resize 480x270 -background transparent -gravity center assets/img/thumbnail-480x270.jpg
+
+## Extend background rand resize
+convert assets/img/blog/ecdsa-node.png -resize 1920x1080 -background "rgb(227,232,241)" -gravity center -extent 1920x1080 assets/img/blog/ecdsa-node@1x.jpg
+convert assets/img/blog/ecdsa-node@1x.jpg -resize 960x540 -gravity center assets/img/blog/ecdsa-node@0,5x.jpg
+convert assets/img/blog/ecdsa-node@1x.jpg -resize 480x270 -gravity center assets/img/blog/ecdsa-node0,25x.jpg
