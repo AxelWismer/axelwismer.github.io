@@ -6,6 +6,8 @@ image:
     1920w: /assets/img/thumbnail-1920x1080.jpg
     960w:  /assets/img/thumbnail-960x540.jpg
     480w:  /assets/img/thumbnail-480x270.jpg
+hide_image: false
+cover: true
 ---
 
 # Axel Wismer
