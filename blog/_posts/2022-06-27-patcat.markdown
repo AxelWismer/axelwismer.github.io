@@ -17,7 +17,7 @@ description: >
 # PatCat
 
 
-#### Check the [Live project](https://houv30niob.execute-api.us-east-2.amazonaws.com/dev) and [Github code]({{page.repository}})
+##### Check the [Live project](https://houv30niob.execute-api.us-east-2.amazonaws.com/dev) and [Github code]({{page.repository}})
 
 # Architecture
 ![Full-width image](https://github.com/AxelWismer/PatCat/raw/main/docs/architecture.png){:.lead width="800" height="100"}

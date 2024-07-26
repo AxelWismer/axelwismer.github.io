@@ -34,3 +34,8 @@ convert assets/img/thumbnail-1920x1080.jpg -resize 480x270 -background transpare
 convert assets/img/blog/ecdsa-node.png -resize 1920x1080 -background "rgb(227,232,241)" -gravity center -extent 1920x1080 assets/img/blog/ecdsa-node@1x.jpg
 convert assets/img/blog/ecdsa-node@1x.jpg -resize 960x540 -gravity center assets/img/blog/ecdsa-node@0,5x.jpg
 convert assets/img/blog/ecdsa-node@1x.jpg -resize 480x270 -gravity center assets/img/blog/ecdsa-node0,25x.jpg
+
+## Blockexplorer: Extend background rand resize
+convert assets/img/blog/blockexplorer.png -resize 1920x1080 -background "rgb(247, 245, 247)" -gravity center -extent 1920x1080 assets/img/blog/blockexplorer@1x.jpg
+convert assets/img/blog/blockexplorer@1x.jpg -resize 960x540 -gravity center assets/img/blog/blockexplorer@0,5x.jpg
+convert assets/img/blog/blockexplorer@1x.jpg -resize 480x270 -gravity center assets/img/blog/blockexplorer0,25x.jpg

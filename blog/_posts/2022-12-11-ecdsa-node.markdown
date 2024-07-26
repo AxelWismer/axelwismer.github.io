@@ -2,7 +2,7 @@
 layout: post
 title:  "ECDSA Node"
 date:   2022-12-11 12:00:27 -0000
-tags: blockchain cryptography
+tags: blockchain cryptography react node
 sitemap: false
 description: >
   This project is an example of using a client and server to facilitate transfers between different addresses.
@@ -17,7 +17,7 @@ repository: https://github.com/AxelWismer/ecdsa-node
 ---
 ## ECDSA Node
 
-###### [Github code]({{page.repository}})
+##### [Github repo]({{page.repository}})
 
 This project is an example of using a client and server to facilitate transfers between different addresses. Since there is just a single server on the back-end handling transfers, this is clearly very centralized. We won't worry about distributed consensus for this project.
 
