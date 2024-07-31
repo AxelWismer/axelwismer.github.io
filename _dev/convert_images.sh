@@ -21,6 +21,9 @@ convert assets/icons/icon.png -resize 152x152 -background transparent -gravity c
 convert assets/icons/icon.png -resize 144x144 -background transparent -gravity center assets/icons/icon-144x144.png
 convert assets/icons/icon.png -resize 96x96 -background transparent -gravity center assets/icons/icon-96x96.png
 convert assets/icons/icon.png -resize 72x72 -background transparent -gravity center assets/icons/icon-72x72.png
+convert assets/icons/icon.png -resize 32x32 -background transparent -gravity center assets/icons/icon-32x32.png
+convert assets/icons/icon.png -resize 16x16 -background transparent -gravity center assets/icons/icon-16x16.png
+
 
 ## Convert thumbnail
 ## Resize to the correct format by cropping 
@@ -29,6 +32,10 @@ convert assets/img/thumbnail.png -resize 1920x1080^ -gravity center -crop 1920x1
 ## Resize proportionally
 convert assets/img/thumbnail-1920x1080.jpg -resize 960x540 -background transparent -gravity center assets/img/thumbnail-960x540.jpg
 convert assets/img/thumbnail-1920x1080.jpg -resize 480x270 -background transparent -gravity center assets/img/thumbnail-480x270.jpg
+
+## Thumbnail big
+convert assets/img/thumbnail-big.png -resize 480x270^ -gravity center -crop 480x270+0+0 +repage assets/img/thumbnail-480x270.jpg
+convert assets/img/thumbnail-big.png -resize 384x384^ -gravity center -crop 384x384+0+0 +repage assets/img/thumbnail-384x384.jpg
 
 ## Extend background rand resize
 convert assets/img/blog/ecdsa-node.png -resize 1920x1080 -background "rgb(227,232,241)" -gravity center -extent 1920x1080 assets/img/blog/ecdsa-node@1x.jpg
