@@ -3,6 +3,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/icon-16x16.png">
 
 <!-- Google tag (gtag.js) -->
+<!-- These tags appear only on production to not produce incorrect statistics -->
+{% if jekyll.environment == "production" %}
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2B7C0W6RT"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -11,3 +13,4 @@
 
   gtag('config', 'G-V2B7C0W6RT');
 </script>
+{% endif %}
