@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Build an SEO Blog with Jekyll"
+title: "Creating an SEO-Friendly Site with Jekyll"
 tags:
   - Jekyll
   - SEO
@@ -17,10 +17,10 @@ image:
     960w:   /assets/img/blog/jekyll-blog-960x540.jpg
     480w:   /assets/img/blog/jekyll-blog-480x270.jpg
 description: > 
-    Create an SEO-friendly static blog using Jekyll and GitHub Pages.
+    Create an SEO-friendly static Site using Jekyll and GitHub Pages.
 ---
 
-# Build an SEO Blog with Jekyll
+# Create an SEO Blog with Jekyll
 
 [GitHub code]({{page.repository}})
 
@@ -182,7 +182,7 @@ In Jekyll, each page is a single **.markdown** file that includes the [**Front M
 ~~~markdown
 ---
 layout: post
-title:  "Build an SEO Blog with Jekyll"
+title:  "Create an SEO Blog with Jekyll"
 tags: frontend jekyll
 sitemap: false
 repository: https://github.com/AxelWismer/axelwismer.github.io
@@ -195,7 +195,7 @@ image:
 description: > 
     Build an SEO static site with Jekyll templates and deploy it on GitHub Pages.
 ---
-# Build an SEO Blog with Jekyll
+# Create an SEO Blog with Jekyll
 Content
 ...
 ~~~
