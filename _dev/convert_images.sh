@@ -33,6 +33,13 @@ convert assets/img/thumbnail-big.png -resize 1920x1080^ -gravity center -crop 19
 convert assets/img/thumbnail-1920x1080.jpg -resize 960x540 -background transparent -gravity center assets/img/thumbnail-960x540.jpg
 convert assets/img/thumbnail-1920x1080.jpg -resize 480x270 -background transparent -gravity center assets/img/thumbnail-480x270.jpg
 
+## Create image for jekyll blog post
+convert assets/img/thumbnail-medium.jpg -resize 1920x1080^ -gravity center -crop 1920x1080+0+0 +repage assets/img/blog/jekyll-blog-1920x1080.jpg
+
+## Resize proportionally
+convert assets/img/blog/jekyll-blog-1920x1080.jpg -resize 960x540 -background transparent -gravity center assets/img/blog/jekyll-blog-960x540.jpg
+convert assets/img/blog/jekyll-blog-1920x1080.jpg -resize 480x270 -background transparent -gravity center assets/img/blog/jekyll-blog-480x270.jpg
+
 
 ## Extend background rand resize
 convert assets/img/blog/ecdsa-node.png -resize 1920x1080 -background "rgb(227,232,241)" -gravity center -extent 1920x1080 assets/img/blog/ecdsa-node@1x.jpg
@@ -43,3 +50,8 @@ convert assets/img/blog/ecdsa-node@1x.jpg -resize 480x270 -gravity center assets
 convert assets/img/blog/blockexplorer.png -resize 1920x1080 -background "rgb(247, 245, 247)" -gravity center -extent 1920x1080 assets/img/blog/blockexplorer@1x.jpg
 convert assets/img/blog/blockexplorer@1x.jpg -resize 960x540 -gravity center assets/img/blog/blockexplorer@0,5x.jpg
 convert assets/img/blog/blockexplorer@1x.jpg -resize 480x270 -gravity center assets/img/blog/blockexplorer0,25x.jpg
+
+
+## Fork Hydejack
+convert assets/img/blog/fork-hydejack.png -resize 960x540^ -background transparent -gravity center assets/img/blog/fork-hydejack@0,5x.jpg
+convert assets/img/blog/fork-hydejack.png -resize 480x270^ -background transparent -gravity center assets/img/blog/fork-hydejack@0,25x.jpg
