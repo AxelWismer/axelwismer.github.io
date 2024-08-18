@@ -55,3 +55,6 @@ convert assets/img/blog/blockexplorer@1x.jpg -resize 480x270 -gravity center ass
 ## Fork Hydejack
 convert assets/img/blog/fork-hydejack.png -resize 960x540^ -background transparent -gravity center assets/img/blog/fork-hydejack@0,5x.jpg
 convert assets/img/blog/fork-hydejack.png -resize 480x270^ -background transparent -gravity center assets/img/blog/fork-hydejack@0,25x.jpg
+
+## Jekyll blog view
+convert assets/img/blog/jekyll-blog-view.png quality assets/img/blog/jekyll-blog-view.jpg
