@@ -1,7 +1,13 @@
 ---
 layout: post
-title:  "Build and Deploy a SEO Blog with Jekyll"
-tags: frontend jekyll
+title: "Build an SEO Blog with Jekyll"
+tags:
+  - Jekyll
+  - SEO
+  - GitHub Pages
+  - Frontend
+  - Ruby
+  - Markdown
 sitemap: false
 repository: https://github.com/AxelWismer/axelwismer.github.io
 image: 
@@ -11,43 +17,36 @@ image:
     960w:   /assets/img/blog/jekyll-blog-960x540.jpg
     480w:   /assets/img/blog/jekyll-blog-480x270.jpg
 description: > 
-    Build an SEO static site with Jekyll templates and deploy it on GitHub Pages.
+    Create an SEO-friendly static blog using Jekyll and GitHub Pages.
 ---
 
-# Build and Deploy a SEO Blog with Jekyll
+# Build an SEO Blog with Jekyll
 
 [GitHub code]({{page.repository}})
 
 ## Why Jekyll?
--------
 
-If you want to build a webpage today, there are many options. From popular JS frameworks like [React](https://react.dev/), [Angular](https://angular.dev/), and [Next.js](https://nextjs.org/) to low/no-code solutions like [Wix](https://www.wix.com/), [Builder.io](https://www.builder.io/), and [Webflow](https://www.wix.com/).
+When building a website today, there are numerous options available. Popular JavaScript frameworks like [React](https://react.dev/), [Angular](https://angular.dev/), and [Next.js](https://nextjs.org/) offer advanced functionality and flexibility but require a strong understanding of frontend design and web technologies. They can also pose challenges for performance and [SEO](https://developers.google.com/search/docs/fundamentals/seo-starter-guide).
 
-While **JS and CSS frameworks** are free and offer advanced functionalities and great **flexibility**, they require an advanced understanding of frontend design and web technologies. They can also have **performance** and **[SEO](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)** issues.
+On the other hand, low/no-code solutions such as [Wix](https://www.wix.com/), [Builder.io](https://www.builder.io/), and [Webflow](https://www.wix.com/) provide excellent templates for starting a fully functional website with ease, though they often come with costs and [vendor lock-in](https://medium.com/@Infosec-Train/what-is-vendor-lock-in-1259cbe5baa9).
 
-On the other hand, many **low/no-code** solutions offer great templates, allowing you to start with a fully functional website and then customize it. The trade-offs are the costs and [Vendor Lock-in](https://medium.com/@Infosec-Train/what-is-vendor-lock-in-1259cbe5baa9).
-
-In this context, **[Jekyll](https://jekyllrb.com/)** sits right in the middle. Jekyll is an open-source technology with a large selection of templates and plugins that let you focus on content creation and design rather than building from scratch. It simplifies content creation by using **[Markdown](https://de.wikipedia.org/wiki/Markdown)** (the same as GitHub's README.md) while still allowing the use of HTML, CSS, and JS.
+**Jekyll** offers a middle ground. As an open-source tool, Jekyll provides a range of templates and plugins that allow you to focus on content creation and design rather than building everything from scratch. It simplifies content creation using **[Markdown](https://de.wikipedia.org/wiki/Markdown)**, similar to GitHub's README.md files, while still supporting HTML, CSS, and JavaScript.
 
 ## Finding the Right Theme
 
-By default, a new Jekyll project uses the **[Minima theme](https://github.com/jekyll/minima)**. However, for more personalized themes, you can check out all **[community-maintained themes](https://jekyllrb.com/docs/themes/)**.
-For this project, I chose the **[Hydejack](https://hydejack.com/)** free version, as it has many features out of the box like a feed page, about section, math support, and SEO. 
+By default, a new Jekyll project uses the **[Minima theme](https://github.com/jekyll/minima)**. For more personalized themes, explore the **[community-maintained themes](https://jekyllrb.com/docs/themes/)**. 
+
+For this project, I selected the **[Hydejack](https://hydejack.com/)** free version. It includes many features out of the box, such as a feed page, an about section, math support, and SEO features.
 
 ## Fork the GitHub Repo and Set Up GitHub Pages
 
-Go to the selected theme and fork the repo.
-![Full-width image](/assets/img/blog/fork-hydejack.png)
-For the name, select **{Your GitHub Username}.github.io**, e.g., [axelwismer.github.io](https://github.com/AxelWismer/axelwismer.github.io).
+Visit the theme’s page and fork the repository. Name it **{Your GitHub Username}.github.io**, e.g., [axelwismer.github.io](https://github.com/AxelWismer/axelwismer.github.io).
 
 ## Deploy the Site on GitHub Pages
 
-For **CI/CD**, we will use GitHub Actions. This allows us to update only the Markdown and .yml files, leaving the generation of all site files to **GitHub Actions**.
-![Full-width image](/assets/img/blog/github-pages.png)
+To automate deployment, we use GitHub Actions for continuous integration and delivery. This setup allows us to manage only the Markdown and `.yml` files, with GitHub Actions handling site generation.
 
-GitHub recognizes that the site is made with Jekyll, so it automatically creates the [**workflow file**](https://github.com/AxelWismer/axelwismer.github.io/blob/master/.github/workflows/jekyll.yml).
-
-This file states that GitHub will track push changes on the **master** branch, then install all dependencies (gems), and finally create the static files and put them in the **_site** folder.
+GitHub recognizes that the site uses Jekyll and automatically creates the [**workflow file**](https://github.com/AxelWismer/axelwismer.github.io/blob/master/.github/workflows/jekyll.yml). This file configures GitHub to monitor changes to the **master** branch, install dependencies (gems), and generate static files into the **_site** folder.
 
 ~~~yml
 ...
@@ -78,7 +77,7 @@ jobs:
 ...
 ~~~
 
-Now you have your site deployed on GitHub Pages, and you can update it by pushing new changes to main.
+Your site will now be deployed on GitHub Pages. To update it, simply push new changes to the main branch.
 
 To clone the repository, use [**GitHub Desktop**](https://github.com/apps/desktop) or install [**GitHub CLI**](https://cli.github.com/) and run:
 
@@ -88,20 +87,19 @@ git clone https://github.com/AxelWismer/axelwismer.github.io.git
 
 ## Installing Jekyll and Ruby
 
-To build and serve the site locally to test our changes, we need to install **Ruby**, **Bundler**, and **Jekyll**.
+To build and serve the site locally, you'll need to install **Ruby**, **Bundler**, and **Jekyll**.
 
 ### Installing Ruby
 
-**Ruby** is the language used to render Jekyll's files. Themes are also installed through gems.
+**Ruby** is the language used to render Jekyll’s files and install themes through gems.
 
-[Here](https://www.ruby-lang.org/en/documentation/installation/) you can find the installation guide for each OS.
-Since I have Ubuntu 20.04.2, I used Snap to install Ruby.
+Find the installation guide for each operating system [here](https://www.ruby-lang.org/en/documentation/installation/). On Ubuntu 20.04.2, I used Snap to install Ruby:
 
 ~~~sh
 sudo snap install ruby --classic
 ~~~
 
-After installation, check the version of Ruby and Gem:
+After installation, verify the Ruby and Gem versions:
 
 ~~~sh
 ruby -v     # ruby 3.3.4 (2024-07-09 revision be1089c8ec) [x86_64-linux]
@@ -110,7 +108,7 @@ gem -v      # 3.5.11
 
 ### Installing Bundler
 
-**[Bundler](https://bundler.io/)** provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions needed.
+**[Bundler](https://bundler.io/)** ensures a consistent environment for Ruby projects by managing gem dependencies.
 
 ~~~sh
 gem install bundler
@@ -123,17 +121,17 @@ bundle -v   # Bundler version 2.5.15
 gem install jekyll
 ~~~
 
-Also, see the full **[installation guide](https://jekyllrb.com/)**.
+For the complete installation guide, visit [Jekyll’s official site](https://jekyllrb.com/).
 
 ## Serve the Site in Your Browser
 
-Now that we've installed everything, we can serve the site on localhost (127.0.0.1:4000) by running:
+Once everything is installed, you can serve the site locally at `localhost:4000` by running:
 
 ~~~sh
 jekyll serve
 ~~~
 
-To make new changes (except for _config.yml) appear in the browser, run:
+For incremental updates (excluding changes to _config.yml) and live reload:
 
 ~~~sh
 jekyll serve --incremental --livereload
@@ -144,14 +142,13 @@ jekyll serve --incremental --livereload
   Server running... press ctrl-c to stop.
 ~~~
 
-Enter the link in your browser to see the result.
+Open the provided link in your browser to view the site.
 
 ## Configuring the Site
 
-You can make general configuration changes in the **_config.yml** file.
-The parameters you can configure depend on the template and gems you have installed.
+You can make general configuration changes in the **_config.yml** file. The parameters available depend on the template and gems used.
 
-Here is an example where I configure the page parameters for **Search Engine Optimization (SEO)** used by the **jekyll-seo-tag** gem.
+Here’s an example configuration for **Search Engine Optimization (SEO)** with the **jekyll-seo-tag** gem:
 
 ~~~yml
 # Language of your content in 2-letter code, e.g., en, de.
@@ -180,13 +177,12 @@ logo:                  /assets/img/logo.png
 
 ## Writing Content
 
-Like this article you are reading, every page in Jekyll is a single **.markdown** file which includes the [**Front Matter**](https://jekyllrb.com/docs/front-matter/) and the content.
-
+In Jekyll, each page is a single **.markdown** file that includes the [**Front Matter**](https://jekyllrb.com/docs/front-matter/) and content.
 
 ~~~markdown
 ---
 layout: post
-title:  "Build and Deploy a SEO Blog with Jekyll"
+title:  "Build an SEO Blog with Jekyll"
 tags: frontend jekyll
 sitemap: false
 repository: https://github.com/AxelWismer/axelwismer.github.io
@@ -199,49 +195,44 @@ image:
 description: > 
     Build an SEO static site with Jekyll templates and deploy it on GitHub Pages.
 ---
-# Build and Deploy a SEO Blog with Jekyll
+# Build an SEO Blog with Jekyll
 Content
 ...
 ~~~
-Here is the result from the feed page (part of Hidejack template)
+Here is a preview from the feed page (part of the Hydejack template):
 
-![Full-width image](/assets/img/blog/jekyll-blog-view.jpg)
+![Page preview](/assets/img/blog/jekyll-blog-view.jpg)
 
-The pages are located in the blog/_posts folder in my case.
+The pages are located in the `blog/_posts` folder in my case.
 
 ## Handling Images
 
-To insert an image, you can reference a file in your directories or provide an external link:
+To insert an image, reference a file in your directories or provide an external link:
 
 ~~~markdown
-![alt](/assets/img/blog/github-pages.png) # Local image
-![alt](https://jekyllrb.com/img/logo-2x.png) # External image
+![Local image](/assets/img/blog/github-pages.png)
+![External image](https://jekyllrb.com/img/logo-2x.png)
 ~~~
 
-It's better to serve local files, as you can make changes to them and ensure they are always available.
+Serving local files is preferable as it ensures they are always available and allows for easy modifications.
 
 ### Editing Images with ImageMagick
 
-While creating this page, I found that I needed to modify many images to serve them in the right sizes and proportions.
-I also wanted to perform operations like extending the background of an image or changing its format.
+I used [**ImageMagick**](https://imagemagick.org/index.php) to modify images, such as resizing, changing formats, or extending backgrounds. I created a script to automate these tasks, so you can replace images and reapply the script as needed.
 
-For that, I compiled a script that uses [**ImageMagick**](https://imagemagick.org/index.php) to perform all necessary operations on the files.
-This also has the advantage that once I define the changes an image should have, I can replace the image with a new version and run the script again to apply the changes.
-
-Here is an example:
+Here’s an example:
 
 ~~~shell
-# Resize an image to the right proportion
+# Resize an image to the correct proportion
 convert assets/img/blog/patcat-architecture.png -resize 960x720 -background transparent -gravity center -extent 960x720 assets/img/blog/patcat-architecture@0,5x.png
 
 # Remove background
 convert assets/img/logo.png -fuzz 20% -transparent black result.png
 
-# Create icon
-# Convert to ico
+# Create icon in .ico format
 convert assets/icons/icon.png -resize 140x140 -gravity center assets/icons/favicon.ico
 
-# Convert to all the sizes
+# Convert to multiple sizes
 convert assets/icons/icon.png -resize 512x512 -background transparent -gravity center assets/icons/icon-512x512.png
 convert assets/icons/icon.png -resize 384x384 -background transparent -gravity center assets/icons/icon-384x384.png
 convert assets/icons/icon.png -resize 192x192 -background transparent -gravity center assets/icons/icon-192x192.png
@@ -250,7 +241,7 @@ convert assets/icons/icon.png -resize 192x192 -background transparent -gravity c
 
 ### Embedding Videos
 
-To embed a video, I created an HTML file in the [**_includes**](https://jekyllrb.com/docs/includes/) folder, which allows me to write reusable snippets.
+To embed a video, create an HTML file in the [**_includes**](https://jekyllrb.com/docs/includes/) folder with reusable snippets:
 
 ~~~html
 <!-- source: https://github.com/nathancy/jekyll-embed-video -->
@@ -260,16 +251,15 @@ To embed a video, I created an HTML file in the [**_includes**](https://jekyllrb
 </video>
 ~~~
 
-Then I include it in the post with:
+Include it in your post with:
 
 ~~~jinja
 {% raw %}{% include video.html id="https://user-images.githubusercontent.com/49920097/206914537-8491be30-90f3-4940-bc67-e5427cbdaadf.mp4" %}{% endraw %}
 ~~~
 
-For example, this is an embedded video from my project [**ECDSA Node**](/blog/_posts/2022-12-11-ecdsa-node.markdown).
+For instance, here is an embedded video from my project [**ECDSA Node**](/blog/_posts/2022-12-11-ecdsa-node.markdown):
 {% include video.html id="https://user-images.githubusercontent.com/49920097/206914537-8491be30-90f3-4940-bc67-e5427cbdaadf.mp4" %}
 
 ---
-That's it! Now you can build a static blog with a modern look and deploy it for free on GitHub.
-If you want to see more examples, check out the rest of my [**Blog**](/blog), or the code for this project on my [**Repo**]({{page.repository}}).
 
+That's it! You now have a static blog with a modern look deployed for free on GitHub Pages. For more examples, check out the rest of my [**Blog**](/blog), or view the code for this project on my [**Repo**]({{page.repository}}).
